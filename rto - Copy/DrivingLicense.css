@@ -1,0 +1,671 @@
+/* =========================================
+    GLOBAL
+  ========================================= */
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .dl-page {
+    width: 100%;
+    min-height: calc(100vh - 70px);
+    background: #f5faf9;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #1f2937;
+  }
+
+
+  /* =========================================
+    HERO SECTION
+  ========================================= */
+
+  .dl-hero {
+    width: 100%;
+    min-height: 280px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(
+      135deg,
+      #00897B 0%,
+      #00796B 50%,
+      #00695C 100%
+    );
+  }
+
+
+  /* Decorative Circle */
+
+  .dl-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    top: -160px;
+    left: -80px;
+  }
+
+
+  .dl-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    right: -150px;
+    bottom: -230px;
+  }
+
+
+  /* Hero Content */
+
+  .dl-hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 750px;
+  }
+
+
+  .dl-badge {
+    display: inline-block;
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    padding: 7px 16px;
+
+    border-radius: 30px;
+
+    margin-bottom: 16px;
+  }
+
+
+  .dl-hero-content h1 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 42px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+  }
+
+
+  .dl-hero-content p {
+    margin: 15px auto 0;
+
+    max-width: 650px;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 16px;
+
+    line-height: 1.6;
+  }
+
+
+  /* =========================================
+    MAIN CONTENT
+  ========================================= */
+
+  .dl-main {
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 55px 6% 70px;
+  }
+
+
+  /* =========================================
+    SECTION HEADING
+  ========================================= */
+
+  .dl-section-heading {
+    margin-bottom: 30px;
+  }
+
+
+  .dl-small-title {
+    color: #00897B;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+  }
+
+
+  .dl-section-heading h2 {
+    margin: 8px 0;
+
+    font-size: 30px;
+
+    color: #1f2937;
+
+    font-weight: 700;
+  }
+
+
+  .dl-section-heading p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+  }
+
+
+  /* =========================================
+    PROCESS CARD
+  ========================================= */
+
+  .dl-process-card {
+    width: 100%;
+
+    background: #ffffff;
+
+    border: 1px solid #dceeea;
+
+    border-radius: 16px;
+
+    padding: 28px 32px;
+
+    margin-bottom: 30px;
+
+    box-shadow: 0 5px 18px rgba(0, 122, 120, 0.05);
+  }
+
+
+  .process-heading h3 {
+    margin: 0 0 6px;
+
+    font-size: 20px;
+
+    color: #1f2937;
+  }
+
+
+  .process-heading p {
+    margin: 0;
+
+    font-size: 13px;
+
+    color: #64748b;
+  }
+
+
+  /* =========================================
+    STEPS
+  ========================================= */
+
+  .dl-steps {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    margin-top: 30px;
+  }
+
+
+  .dl-step {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex: 1;
+  }
+
+
+  .step-circle {
+    width: 50px;
+    height: 50px;
+
+    min-width: 50px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #e8f7f5;
+
+    color: #00897B;
+
+    border: 1px solid #cce9e5;
+
+    transition: 0.3s ease;
+  }
+
+
+  .dl-step.active .step-circle {
+    background: #00897B;
+
+    color: #ffffff;
+
+    border-color: #00897B;
+
+    box-shadow: 0 5px 15px rgba(0, 122, 120, 0.25);
+  }
+
+
+  .step-text span {
+    display: block;
+
+    color: #00897B;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    margin-bottom: 3px;
+  }
+
+
+  .step-text h4 {
+    margin: 0;
+
+    color: #1f2937;
+
+    font-size: 14px;
+  }
+
+
+  .step-connector {
+    height: 2px;
+
+    width: 50px;
+
+    background: #dceeea;
+
+    margin: 0 15px;
+  }
+
+
+  /* =========================================
+    SERVICE CARDS
+  ========================================= */
+
+  .dl-services-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+    margin-bottom: 30px;
+  }
+
+
+  .dl-service-card {
+    background: #ffffff;
+
+    border: 1px solid #dceeea;
+
+    border-radius: 16px;
+
+    padding: 30px;
+
+    transition: all 0.3s ease;
+
+    box-shadow: 0 5px 18px rgba(0, 122, 120, 0.04);
+  }
+
+
+  .dl-service-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #8ed5cf;
+
+    box-shadow: 0 15px 30px rgba(0, 122, 120, 0.12);
+  }
+
+
+  /* =========================================
+    SERVICE TOP
+  ========================================= */
+
+  .service-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 22px;
+  }
+
+
+  .service-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #e8f7f5;
+
+    color: #00897B;
+
+    border-radius: 12px;
+  }
+
+
+  .service-label {
+    color: #00897B;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    background: #e8f7f5;
+
+    padding: 7px 10px;
+
+    border-radius: 20px;
+  }
+
+
+  /* =========================================
+    SERVICE CONTENT
+  ========================================= */
+
+  .dl-service-card h3 {
+    margin: 0 0 12px;
+
+    font-size: 21px;
+
+    color: #1f2937;
+  }
+
+
+  .dl-service-card > p {
+    margin: 0 0 22px;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+
+  /* =========================================
+    FEATURES
+  ========================================= */
+
+  .service-features {
+    list-style: none;
+
+    margin: 0 0 25px;
+
+    padding: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+
+  .service-features li {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: #475569;
+
+    font-size: 13px;
+  }
+
+
+  .service-features svg {
+    color: #00897B;
+
+    flex-shrink: 0;
+  }
+
+
+  /* =========================================
+    BUTTON
+  ========================================= */
+
+  .dl-action-btn {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    background: #00897B;
+
+    color: #ffffff;
+
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+  }
+
+
+  .dl-action-btn:hover {
+    background: #00695C;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 7px 15px rgba(0, 122, 120, 0.2);
+  }
+
+
+  /* =========================================
+    INFORMATION BOX
+  ========================================= */
+
+  .dl-info-box {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 22px 25px;
+
+    background: #e8f7f5;
+
+    border: 1px solid #cce9e5;
+
+    border-radius: 12px;
+  }
+
+
+  .info-icon {
+    width: 50px;
+    height: 50px;
+
+    min-width: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #ffffff;
+
+    color: #00897B;
+
+    border-radius: 10px;
+  }
+
+
+  .dl-info-box h3 {
+    margin: 0 0 5px;
+
+    color: #00695C;
+
+    font-size: 16px;
+  }
+
+
+  .dl-info-box p {
+    margin: 0;
+
+    color: #52706e;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+  }
+
+
+  /* =========================================
+    RESPONSIVE
+  ========================================= */
+
+  @media (max-width: 900px) {
+
+    .dl-services-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .dl-steps {
+      flex-wrap: wrap;
+
+      gap: 20px;
+    }
+
+    .dl-step {
+      flex: 1 1 40%;
+    }
+
+    .step-connector {
+      display: none;
+    }
+
+  }
+
+
+  @media (max-width: 600px) {
+
+    .dl-hero {
+      min-height: 240px;
+
+      padding: 40px 20px;
+    }
+
+    .dl-hero-content h1 {
+      font-size: 30px;
+    }
+
+    .dl-hero-content p {
+      font-size: 14px;
+    }
+
+    .dl-main {
+      padding: 40px 18px 50px;
+    }
+
+    .dl-section-heading h2 {
+      font-size: 25px;
+    }
+
+    .dl-process-card {
+      padding: 22px;
+    }
+
+    .dl-steps {
+      flex-direction: column;
+
+      align-items: flex-start;
+    }
+
+    .dl-step {
+      width: 100%;
+    }
+
+    .dl-service-card {
+      padding: 22px;
+    }
+
+    .service-top {
+      align-items: flex-start;
+
+      gap: 15px;
+    }
+
+    .service-label {
+      font-size: 9px;
+    }
+
+    .dl-info-box {
+      align-items: flex-start;
+    }
+
+  }

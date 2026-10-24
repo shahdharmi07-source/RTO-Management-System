@@ -1,0 +1,37 @@
+.site-back-button {
+    position: fixed;
+    z-index: 10000;
+    bottom: 20px;
+    left: 20px;
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 17px;
+    border: 1px solid #00796b;
+    border-radius: 10px;
+    background: #00897b;
+    box-shadow: 0 5px 16px rgba(0, 77, 64, 0.22);
+    color: #fff;
+    font: 600 14px/1.2 "Segoe UI", Arial, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.site-back-button:hover {
+    transform: translateY(-2px);
+    background: #00695c;
+}
+
+.site-back-button:focus-visible {
+    outline: 3px solid rgba(0, 137, 123, 0.35);
+    outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+    .site-back-button {
+        bottom: 14px;
+        left: 14px;
+        min-height: 42px;
+    }
+}

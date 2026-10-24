@@ -1,0 +1,734 @@
+/* =====================================================
+   RTO APPOINTMENT - STEP 1
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f9f8;
+    color: #102a43;
+}
+
+.appointment-page {
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.appointment-hero {
+    width: 100%;
+    min-height: 305px;
+
+    background: linear-gradient(
+        135deg,
+        #009688 0%,
+        #00897B 50%,
+        #00695C 100%
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+    overflow: hidden;
+
+    padding: 60px 20px;
+}
+
+.appointment-hero::before {
+    content: "";
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.06);
+
+    top: -120px;
+    right: 8%;
+}
+
+.appointment-hero::after {
+    content: "";
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.05);
+
+    bottom: -120px;
+    left: 8%;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 850px;
+}
+
+.hero-badge {
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    border: 1px solid rgba(255,255,255,0.4);
+
+    border-radius: 30px;
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    color: #ffffff;
+
+    font-size: 48px;
+
+    font-weight: 700;
+
+    margin-bottom: 18px;
+}
+
+.hero-content p {
+    color: #e8fffc;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    max-width: 750px;
+
+    margin: auto;
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.appointment-main {
+    width: 100%;
+
+    max-width: 1450px;
+
+    margin: auto;
+
+    padding: 55px 40px 70px;
+}
+
+
+/* =====================================================
+   PAGE HEADING
+===================================================== */
+
+.page-heading {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.page-heading span {
+    display: block;
+
+    color: #00897B;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.6px;
+
+    margin-bottom: 12px;
+}
+
+.page-heading h2 {
+    color: #102a43;
+
+    font-size: 34px;
+
+    margin-bottom: 10px;
+}
+
+.page-heading p {
+    color: #607d98;
+
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   STEP PROCESS
+===================================================== */
+
+.steps-wrapper {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-bottom: 45px;
+}
+
+.appointment-step {
+    flex: 1;
+
+    min-height: 105px;
+
+    padding: 20px 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #d9e9e7;
+
+    border-radius: 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    transition: 0.3s ease;
+}
+
+.appointment-step.active {
+    background: #009688;
+
+    border-color: #009688;
+
+    box-shadow: 0 15px 35px rgba(0, 127, 123, 0.18);
+}
+
+.step-circle {
+    width: 58px;
+    height: 58px;
+
+    min-width: 58px;
+
+    border-radius: 50%;
+
+    background: #e5f4f2;
+
+    color: #00897B;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+.appointment-step.active .step-circle {
+    background: #ffffff;
+
+    color: #00897B;
+}
+
+.step-text {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.step-text small {
+    color: #00897B;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.appointment-step.active .step-text small {
+    color: #d9fffb;
+}
+
+.step-text strong {
+    color: #102a43;
+
+    font-size: 16px;
+}
+
+.appointment-step.active .step-text strong {
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   STEP LINE
+===================================================== */
+
+.step-line {
+    width: 40px;
+
+    height: 3px;
+
+    background: #d4e8e5;
+
+    flex-shrink: 0;
+}
+
+
+/* =====================================================
+   SERVICE CARD
+===================================================== */
+
+.service-card {
+    width: 100%;
+
+    background: #ffffff;
+
+    border: 1px solid #dbe9e7;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    display: grid;
+
+    grid-template-columns: 38% 62%;
+
+    box-shadow: 0 12px 35px rgba(16,42,67,0.07);
+}
+
+
+/* =====================================================
+   LEFT SIDE
+===================================================== */
+
+.service-left {
+    background: linear-gradient(
+        145deg,
+        #009688,
+        #00796B
+    );
+
+    color: #ffffff;
+
+    padding: 55px 45px;
+
+    min-height: 390px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+
+    border-radius: 18px;
+
+    background: rgba(255,255,255,0.15);
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 32px;
+
+    margin-bottom: 30px;
+}
+
+.service-left span {
+    color: #b8f1eb;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 10px;
+}
+
+.service-left h2 {
+    color: #ffffff;
+
+    font-size: 30px;
+
+    margin-bottom: 15px;
+}
+
+.service-left p {
+    color: #d9f5f1;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    max-width: 400px;
+}
+
+
+/* =====================================================
+   RIGHT SIDE
+===================================================== */
+
+.service-right {
+    padding: 55px 55px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.service-right h3 {
+    color: #102a43;
+
+    font-size: 27px;
+
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #607d98;
+
+    font-size: 15px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =====================================================
+   ERROR
+===================================================== */
+
+.error-message {
+    background: #fff0f0;
+
+    border: 1px solid #f5c2c2;
+
+    color: #b42318;
+
+    padding: 12px 15px;
+
+    border-radius: 8px;
+
+    margin-bottom: 20px;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.form-group {
+    width: 100%;
+
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    display: block;
+
+    color: #102a43;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    margin-bottom: 10px;
+}
+
+.form-group select {
+    width: 100%;
+
+    height: 52px;
+
+    padding: 0 15px;
+
+    border: 1px solid #cbdeda;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    color: #102a43;
+
+    font-size: 15px;
+
+    outline: none;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.form-group select:focus {
+    border-color: #009688;
+
+    box-shadow: 0 0 0 3px rgba(0,127,123,0.10);
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.navigation {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.back-btn {
+    text-decoration: none;
+
+    color: #00897B;
+
+    background: #e8f5f3;
+
+    padding: 13px 22px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #d5ece9;
+}
+
+.next-btn {
+    border: none;
+
+    background: #009688;
+
+    color: #ffffff;
+
+    padding: 14px 27px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.next-btn:hover {
+    background: #00695C;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 18px rgba(0,127,123,0.2);
+}
+
+
+/* =====================================================
+   INFO BOX
+===================================================== */
+
+.info-box {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 20px 24px;
+
+    border-radius: 12px;
+
+    background: #eaf7f5;
+
+    border: 1px solid #cbe9e5;
+
+    display: flex;
+
+    gap: 15px;
+
+    align-items: flex-start;
+}
+
+.info-icon {
+    width: 30px;
+    height: 30px;
+
+    min-width: 30px;
+
+    border-radius: 50%;
+
+    background: #009688;
+
+    color: #ffffff;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-weight: 700;
+}
+
+.info-box h3 {
+    color: #00796B;
+
+    font-size: 16px;
+
+    margin-bottom: 5px;
+}
+
+.info-box p {
+    color: #426b69;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .service-card {
+        grid-template-columns: 1fr;
+    }
+
+    .service-left {
+        min-height: auto;
+    }
+
+    .steps-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .appointment-step {
+        flex: 1 1 calc(50% - 20px);
+    }
+
+    .step-line {
+        display: none;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .appointment-hero {
+        min-height: 260px;
+
+        padding: 45px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .appointment-main {
+        padding: 40px 18px;
+    }
+
+    .page-heading h2 {
+        font-size: 27px;
+    }
+
+    .appointment-step {
+        flex: 1 1 100%;
+    }
+
+    .service-left,
+    .service-right {
+        padding: 35px 25px;
+    }
+
+    .navigation {
+        flex-direction: column-reverse;
+
+        align-items: stretch;
+    }
+
+    .back-btn,
+    .next-btn {
+        width: 100%;
+
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .hero-content h1 {
+        font-size: 29px;
+    }
+
+    .page-heading h2 {
+        font-size: 23px;
+    }
+
+    .service-left h2 {
+        font-size: 25px;
+    }
+
+    .service-right h3 {
+        font-size: 23px;
+    }
+}

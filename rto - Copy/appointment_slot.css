@@ -1,0 +1,504 @@
+/* =====================================================
+   FINAL APPOINTMENT SLOT - STEP 4
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    background: #f4f9f8;
+
+    color: #102a43;
+}
+
+.slot-page {
+    min-height: 100vh;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.slot-header {
+    background: linear-gradient(
+        135deg,
+        #009688,
+        #00796B
+    );
+
+    text-align: center;
+
+    padding: 55px 20px;
+}
+
+.slot-header span {
+    color: #b8f1eb;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.slot-header h1 {
+    color: #ffffff;
+
+    font-size: 42px;
+
+    margin: 10px 0;
+}
+
+.slot-header p {
+    color: #d9f5f1;
+
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.slot-main {
+    max-width: 1050px;
+
+    margin: auto;
+
+    padding: 50px 25px 70px;
+}
+
+
+/* =====================================================
+   STEPS
+===================================================== */
+
+.slot-steps {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-bottom: 40px;
+}
+
+.slot-step {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+.slot-circle {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    background: #e3f3f1;
+
+    color: #00897B;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-weight: 700;
+
+    font-size: 15px;
+}
+
+.slot-step span {
+    color: #607d98;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+.slot-step.completed .slot-circle {
+    background: #009688;
+
+    color: #ffffff;
+}
+
+.slot-step.active .slot-circle {
+    background: #009688;
+
+    color: #ffffff;
+
+    box-shadow: 0 0 0 5px #d8eeeb;
+}
+
+.slot-step.active span {
+    color: #009688;
+}
+
+.slot-line {
+    width: 100px;
+
+    height: 2px;
+
+    background: #d4e8e5;
+
+    margin: 0 12px 22px;
+}
+
+
+/* =====================================================
+   MAIN CARD
+===================================================== */
+
+.slot-card {
+    background: #ffffff;
+
+    border: 1px solid #dbe9e7;
+
+    border-radius: 20px;
+
+    padding: 42px;
+
+    box-shadow: 0 15px 35px rgba(16,42,67,0.08);
+}
+
+.slot-card-header span {
+    color: #00897B;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.slot-card-header h2 {
+    color: #102a43;
+
+    font-size: 30px;
+
+    margin: 8px 0;
+}
+
+.slot-card-header p {
+    color: #607d98;
+
+    font-size: 15px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =====================================================
+   SUMMARY
+===================================================== */
+
+.booking-summary {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+.summary-item {
+    background: #f2f9f8;
+
+    border: 1px solid #dceceb;
+
+    border-radius: 10px;
+
+    padding: 17px;
+}
+
+.summary-item small {
+    display: block;
+
+    color: #00897B;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 7px;
+}
+
+.summary-item strong {
+    color: #102a43;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   MESSAGE
+===================================================== */
+
+.slot-error {
+    background: #fff0f0;
+
+    border: 1px solid #f2c2c2;
+
+    color: #b42318;
+
+    padding: 12px 15px;
+
+    border-radius: 8px;
+
+    margin-bottom: 20px;
+}
+
+.slot-success {
+    background: #eaf8f3;
+
+    border: 1px solid #bde4d6;
+
+    color: #087443;
+
+    padding: 14px 16px;
+
+    border-radius: 8px;
+
+    margin-bottom: 25px;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   SLOT HEADING
+===================================================== */
+
+.slot-heading {
+    margin-bottom: 20px;
+}
+
+.slot-heading h3 {
+    color: #102a43;
+
+    font-size: 21px;
+
+    margin-bottom: 5px;
+}
+
+.slot-heading p {
+    color: #607d98;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   SLOT GRID
+===================================================== */
+
+.slots-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.slot-option {
+    position: relative;
+
+    cursor: pointer;
+}
+
+.slot-option input {
+    position: absolute;
+
+    opacity: 0;
+}
+
+.slot-option span {
+    display: block;
+
+    padding: 20px 15px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px solid #cbdeda;
+
+    border-radius: 10px;
+
+    color: #102a43;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.slot-option small {
+    display: block;
+
+    color: #607d98;
+
+    font-size: 12px;
+
+    margin-top: 4px;
+}
+
+.slot-option:hover span {
+    border-color: #009688;
+
+    background: #f0f9f8;
+}
+
+.slot-option input:checked + span {
+    background: #009688;
+
+    border-color: #009688;
+
+    color: #ffffff;
+
+    box-shadow: 0 8px 20px rgba(0,127,123,0.18);
+}
+
+.slot-option input:checked + span small {
+    color: #d9f5f1;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.slot-buttons {
+    margin-top: 35px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.slot-buttons a {
+    text-decoration: none;
+
+    background: #e8f5f3;
+
+    color: #00897B;
+
+    padding: 13px 22px;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.slot-buttons a:hover {
+    background: #d7ece9;
+}
+
+.slot-buttons button {
+    border: none;
+
+    background: #009688;
+
+    color: #ffffff;
+
+    padding: 14px 25px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.slot-buttons button:hover {
+    background: #00695C;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 18px rgba(0,127,123,0.2);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:800px) {
+
+    .booking-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .slots-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .slot-line {
+        width: 40px;
+    }
+}
+
+
+@media(max-width:600px) {
+
+    .slot-header h1 {
+        font-size: 32px;
+    }
+
+    .slot-card {
+        padding: 25px;
+    }
+
+    .slots-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .slot-buttons {
+        flex-direction: column-reverse;
+
+        gap: 12px;
+
+        align-items: stretch;
+    }
+
+    .slot-buttons a,
+    .slot-buttons button {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .slot-line {
+        width: 25px;
+
+        margin-left: 5px;
+
+        margin-right: 5px;
+    }
+}

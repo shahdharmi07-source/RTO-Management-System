@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #e0f2f1;
+    color: #1f2937;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.profile-page {
+    width: min(100% - 32px, 900px);
+    margin: 48px auto;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #00695c;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.profile-card {
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #b2dfdb;
+    border-radius: 14px;
+    box-shadow: 0 8px 28px rgba(0, 105, 92, 0.1);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 28px 32px;
+    color: #fff;
+    background: linear-gradient(135deg, #004d40, #00897b);
+}
+
+.profile-avatar {
+    display: grid;
+    width: 58px;
+    height: 58px;
+    flex: 0 0 58px;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.16);
+    font-size: 28px;
+}
+
+.eyebrow {
+    margin: 0 0 5px;
+    color: #b2dfdb;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.profile-header h1 {
+    margin: 0 0 5px;
+    font-size: 26px;
+}
+
+.profile-header p:last-child {
+    margin: 0;
+    color: #d6efec;
+    font-size: 14px;
+}
+
+.form-message {
+    margin: 24px 32px 0;
+    padding: 12px 15px;
+    border: 1px solid;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.form-message.success {
+    border-color: #80cbc4;
+    background: #e0f2f1;
+    color: #00695c;
+}
+
+.form-message.error {
+    border-color: #f3c5c1;
+    background: #fff1f0;
+    color: #b42318;
+}
+
+.profile-form {
+    padding: 30px 32px 32px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.form-field {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 8px;
+    color: #334155;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-field input {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    border: 1px solid #b2dfdb;
+    border-radius: 7px;
+    background: #fff;
+    color: #1f2937;
+    font: inherit;
+    font-weight: 400;
+}
+
+.form-field input:focus {
+    border-color: #00897b;
+    outline: 3px solid rgba(0, 137, 123, 0.14);
+}
+
+.form-field input[readonly] {
+    background: #f1f5f9;
+    color: #64748b;
+}
+
+.form-field small {
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 30px;
+    padding-top: 22px;
+    border-top: 1px solid #e0f2f1;
+}
+
+.cancel-button,
+.save-button {
+    display: inline-flex;
+    min-height: 42px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 18px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.cancel-button {
+    border-color: #b2dfdb;
+    background: #fff;
+    color: #00695c;
+}
+
+.save-button {
+    background: #00897b;
+    color: #fff;
+}
+
+.save-button:hover {
+    background: #00695c;
+}
+
+@media (max-width: 600px) {
+    .profile-page {
+        margin: 24px auto;
+    }
+
+    .profile-header,
+    .profile-form {
+        padding: 22px 20px;
+    }
+
+    .form-message {
+        margin: 20px 20px 0;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+}

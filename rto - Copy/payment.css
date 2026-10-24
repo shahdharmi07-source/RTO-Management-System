@@ -1,0 +1,621 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3fafa;
+    color: #102a43;
+}
+
+
+.page-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto 50px;
+}
+
+
+/* =====================================================
+   4 STEP PROCESS
+===================================================== */
+
+.steps-card {
+    background: white;
+    border: 1px solid #d9eeee;
+    border-radius: 18px;
+    padding: 30px 35px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+}
+
+
+.steps-card h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+
+.steps-card > p {
+    color: #66809b;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+
+.steps {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.step-circle {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background: #e6f6f5;
+    border: 1px solid #ccebea;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+.step.completed .step-circle,
+.step.active .step-circle {
+    background: #009688;
+    color: white;
+
+    box-shadow:
+        0 8px 20px rgba(7,139,135,0.25);
+}
+
+
+.step small {
+    display: block;
+    color: #009688;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+
+.step strong {
+    display: block;
+    color: #102a43;
+    font-size: 17px;
+}
+
+
+.line {
+    height: 2px;
+    background: #d9eeee;
+    width: 90px;
+}
+
+
+.completed-line {
+    background: #009688;
+}
+
+
+/* =====================================================
+   PAGE HEADER
+===================================================== */
+
+.page-header {
+    background: white;
+    border: 1px solid #d9eeee;
+    border-radius: 18px;
+
+    padding: 25px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 22px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.04);
+}
+
+
+.page-header h2 {
+    font-size: 30px;
+    margin-bottom: 7px;
+}
+
+
+.page-header p {
+    color: #66809b;
+    font-size: 18px;
+}
+
+
+.application-icon {
+    width: 65px;
+    height: 65px;
+
+    background: #e6f6f5;
+
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+}
+
+
+/* =====================================================
+   ERROR
+===================================================== */
+
+.error {
+    background: #ffe8e8;
+    color: #b42318;
+
+    padding: 16px 20px;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+
+    border-left: 5px solid #d92d20;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   FORM CARD
+===================================================== */
+
+.form-card {
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 35px 44px;
+
+    margin-bottom: 28px;
+
+    border: 1px solid #d9eeee;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.04);
+}
+
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
+.section-title {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 35px;
+}
+
+
+.section-title span {
+    width: 56px;
+    height: 56px;
+
+    min-width: 56px;
+
+    border-radius: 50%;
+
+    background: #009688;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+.section-title h2 {
+    font-size: 26px;
+    margin-bottom: 7px;
+}
+
+
+.section-title p {
+    color: #66809b;
+    font-size: 17px;
+}
+
+
+/* =====================================================
+   FEE BOX
+===================================================== */
+
+.fee-box {
+    background: #e6f6f5;
+
+    border: 1px solid #ccebea;
+
+    border-radius: 14px;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 32px;
+}
+
+
+.fee-title {
+    font-size: 20px;
+
+    font-weight: 700;
+
+    color: #526b84;
+}
+
+
+.fee-amount {
+    font-size: 30px;
+
+    font-weight: 800;
+
+    color: #009688;
+}
+
+
+/* =====================================================
+   FORM GROUP
+===================================================== */
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+
+.form-group label {
+    display: block;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    margin-bottom: 12px;
+
+    color: #102a43;
+}
+
+
+.form-group select {
+    width: 100%;
+
+    height: 58px;
+
+    padding: 0 18px;
+
+    border: 1px solid #c8dddd;
+
+    border-radius: 11px;
+
+    background: white;
+
+    color: #102a43;
+
+    font-size: 17px;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+
+.form-group select:focus {
+    border-color: #009688;
+
+    box-shadow:
+        0 0 0 3px rgba(7,139,135,0.10);
+}
+
+.payment-method-fields input,
+.payment-method-fields select {
+    width: 100%;
+    height: 58px;
+    margin-bottom: 16px;
+    padding: 0 18px;
+    border: 1px solid #c8dddd;
+    border-radius: 11px;
+    background: white;
+    color: #102a43;
+    font-size: 16px;
+    outline: none;
+}
+
+.payment-method-fields input:focus,
+.payment-method-fields select:focus {
+    border-color: #009688;
+    box-shadow: 0 0 0 3px rgba(7,139,135,0.10);
+}
+
+.payment-method-fields[hidden] {
+    display: none;
+}
+
+.payment-method-fields .two-columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+
+/* =====================================================
+   PAYMENT INFORMATION
+===================================================== */
+
+.payment-info {
+    background: #f3fafa;
+
+    border: 1px solid #d9eeee;
+
+    border-radius: 14px;
+
+    padding: 25px;
+
+    margin-top: 25px;
+}
+
+
+.payment-info h3 {
+    font-size: 21px;
+
+    margin-bottom: 12px;
+}
+
+
+.payment-info p {
+    color: #66809b;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   FIELD ERROR
+===================================================== */
+
+.field-error {
+    color: #d92d20;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-top: 7px;
+
+    display: none;
+}
+
+
+/* =====================================================
+   DECLARATION
+===================================================== */
+
+.declaration {
+    background: white;
+
+    padding: 20px 25px;
+
+    border-radius: 12px;
+
+    border: 1px solid #d9eeee;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 7px;
+
+    color: #526b84;
+
+    font-size: 15px;
+}
+
+
+.declaration input {
+    width: 19px;
+    height: 19px;
+
+    accent-color: #009688;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.form-buttons {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+    margin-bottom: 40px;
+}
+
+
+.cancel-btn,
+.submit-btn {
+    padding: 15px 30px;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    text-decoration: none;
+
+    text-align: center;
+}
+
+
+/* BACK */
+
+.cancel-btn {
+    background: white;
+
+    color: #009688;
+
+    border: 1px solid #009688;
+
+    min-width: 140px;
+}
+
+
+.cancel-btn:hover {
+    background: #e7f7f6;
+}
+
+
+/* SUBMIT */
+
+.submit-btn {
+    background: #009688;
+
+    color: white;
+
+    border: none;
+
+    min-width: 350px;
+}
+
+
+.submit-btn:hover {
+    background: #009688;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 15px rgba(7,139,135,0.25);
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .page-container {
+        width: 94%;
+    }
+
+
+    .steps {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+
+    .line {
+        width: 2px;
+
+        height: 25px;
+
+        margin-left: 30px;
+    }
+
+
+    .page-header {
+        padding: 22px;
+    }
+
+
+    .form-card {
+        padding: 25px;
+    }
+
+
+    .fee-box {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+
+    .cancel-btn,
+    .submit-btn {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .payment-method-fields .two-columns {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .page-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+
+    .form-card {
+        padding: 20px;
+    }
+
+}

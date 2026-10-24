@@ -1,0 +1,565 @@
+/* =====================================================
+   RESET
+===================================================== */
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f0f9f8;
+    color: #1f2937;
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+.vs-hero {
+    padding: 55px 20px;
+    background: linear-gradient(135deg, #004D40 0%, #00695C 40%, #00897B 100%);
+    color: #fff;
+}
+
+.vs-hero-inner {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.vs-badge {
+    display: inline-block;
+    padding: 7px 16px;
+    border-radius: 25px;
+    background: rgba(255,255,255,.18);
+    border: 1px solid rgba(255,255,255,.35);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    color: #fff;
+}
+
+.vs-hero h1 {
+    margin: 0 0 10px;
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.vs-hero p {
+    margin: 0;
+    color: #b2dfdb;
+    font-size: 15px;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+/* =====================================================
+   PAGE WRAPPER
+===================================================== */
+.vs-page {
+    max-width: 1100px;
+    margin: 40px auto 60px;
+    padding: 0 20px;
+}
+
+/* =====================================================
+   TOOLBAR
+===================================================== */
+.vs-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.vs-toolbar h2 {
+    margin: 0;
+    font-size: 22px;
+    color: #1f2937;
+}
+
+.vs-toolbar p {
+    margin: 4px 0 0;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.btn-register {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: #00897B;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: .2s;
+    white-space: nowrap;
+    box-shadow: 0 3px 10px rgba(0,137,123,.25);
+}
+
+.btn-register:hover {
+    background: #00695C;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,137,123,.35);
+}
+
+/* =====================================================
+   VEHICLE GRID
+===================================================== */
+.vs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 22px;
+}
+
+/* =====================================================
+   VEHICLE CARD
+===================================================== */
+.vs-card {
+    background: #fff;
+    border: 1px solid #b2dfdb;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,137,123,.08);
+    transition: .25s;
+}
+
+.vs-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,137,123,.18);
+}
+
+/* Card Header — teal gradient */
+.vs-card-header {
+    background: linear-gradient(135deg, #004D40 0%, #00695C 50%, #00897B 100%);
+    padding: 20px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vs-card-header .vehicle-no {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.vs-card-header .vehicle-type-badge {
+    padding: 5px 12px;
+    background: rgba(255,255,255,.25);
+    border-radius: 20px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid rgba(255,255,255,.3);
+}
+
+.vs-card-body {
+    padding: 20px 22px;
+}
+
+.vs-info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 9px 0;
+    border-bottom: 1px solid #e0f2f1;
+    font-size: 14px;
+}
+
+.vs-info-row:last-of-type {
+    border-bottom: none;
+}
+
+.vs-info-row .label {
+    color: #64748b;
+    font-weight: 500;
+}
+
+.vs-info-row .value {
+    color: #1f2937;
+    font-weight: 600;
+    text-align: right;
+}
+
+/* =====================================================
+   STATUS BADGES
+===================================================== */
+.vs-status {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.vs-status.pending    { background: #fef9c3; color: #854d0e; }
+.vs-status.scheduled  { background: #e0f2f1; color: #00695C; }
+.vs-status.completed,
+.vs-status.approved   { background: #b2dfdb; color: #004D40; }
+.vs-status.rejected   { background: #fee2e2; color: #991b1b; }
+
+/* =====================================================
+   CARD ACTIONS
+===================================================== */
+.vs-card-actions {
+    padding: 16px 22px;
+    border-top: 1px solid #e0f2f1;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-receipt {
+    flex: 1;
+    padding: 10px 0;
+    background: #00897B;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: .2s;
+}
+
+.btn-receipt:hover {
+    background: #00695C;
+    transform: translateY(-1px);
+}
+
+.renewal-receipt-link {
+    background: #0369a1;
+}
+
+.renewal-receipt-link:hover {
+    background: #075985;
+}
+
+.btn-back {
+    flex: 1;
+    padding: 10px 0;
+    background: #f1f5f9;
+    color: #334155;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: .2s;
+}
+
+.btn-back:hover {
+    background: #e2e8f0;
+}
+
+/* =====================================================
+   EMPTY STATE
+===================================================== */
+.vs-empty {
+    text-align: center;
+    padding: 70px 20px;
+    background: #fff;
+    border-radius: 14px;
+    border: 1px dashed #80cbc4;
+}
+
+.vs-empty .empty-icon {
+    font-size: 56px;
+    margin-bottom: 18px;
+}
+
+.vs-empty h3 {
+    margin: 0 0 10px;
+    color: #374151;
+    font-size: 20px;
+}
+
+.vs-empty p {
+    margin: 0 0 24px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* =====================================================
+   BACK LINK
+===================================================== */
+.vs-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 24px;
+    color: #00897B;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.vs-back:hover {
+    color: #00695C;
+    text-decoration: underline;
+}
+
+/* =====================================================
+   RECEIPT PAGE
+===================================================== */
+.receipt-wrapper {
+    max-width: 780px;
+    margin: 40px auto 70px;
+    padding: 0 20px;
+}
+
+.receipt-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,.10);
+    border: 1px solid #b2dfdb;
+}
+
+/* Receipt Header */
+.receipt-header {
+    background: linear-gradient(135deg, #004D40 0%, #00695C 50%, #00897B 100%);
+    color: #fff;
+    padding: 32px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.receipt-header .org-name {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #b2dfdb;
+    margin-bottom: 6px;
+}
+
+.receipt-header h2 {
+    margin: 0 0 4px;
+    font-size: 26px;
+}
+
+.receipt-header .receipt-sub {
+    font-size: 13px;
+    color: #b2dfdb;
+}
+
+.receipt-number {
+    text-align: right;
+}
+
+.receipt-number .label {
+    font-size: 11px;
+    color: #b2dfdb;
+    margin-bottom: 4px;
+}
+
+.receipt-number .value {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* Vehicle Number Banner */
+.vehicle-no-banner {
+    background: #e0f2f1;
+    border-bottom: 1px solid #b2dfdb;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.vehicle-no-banner .plate {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: #004D40;
+}
+
+.vehicle-no-banner .reg-date {
+    font-size: 13px;
+    color: #64748b;
+}
+
+/* Detail Sections */
+.receipt-body {
+    padding: 32px 40px;
+}
+
+.receipt-section-title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #00897B;
+    text-transform: uppercase;
+    margin: 0 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #b2dfdb;
+}
+
+.receipt-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 30px;
+    margin-bottom: 30px;
+}
+
+.receipt-field .field-label {
+    font-size: 11px;
+    color: #94a3b8;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .8px;
+    margin-bottom: 3px;
+}
+
+.receipt-field .field-value {
+    font-size: 15px;
+    color: #1f2937;
+    font-weight: 600;
+}
+
+/* Fee Table */
+.fee-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 24px;
+}
+
+.fee-table th {
+    background: #e0f2f1;
+    color: #374151;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .6px;
+    text-transform: uppercase;
+    padding: 11px 16px;
+    text-align: left;
+    border-bottom: 1px solid #b2dfdb;
+}
+
+.fee-table td {
+    padding: 13px 16px;
+    font-size: 14px;
+    color: #374151;
+    border-bottom: 1px solid #e0f2f1;
+}
+
+.fee-table .total-row td {
+    font-weight: 700;
+    font-size: 15px;
+    color: #004D40;
+    border-bottom: none;
+    border-top: 2px solid #b2dfdb;
+}
+
+.fee-table td:last-child,
+.fee-table th:last-child {
+    text-align: right;
+}
+
+/* Status Row */
+.receipt-status-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 40px;
+    background: #f0f9f8;
+    border-top: 1px solid #b2dfdb;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.receipt-status-label { font-size: 13px; color: #64748b; }
+
+/* Footer */
+.receipt-footer {
+    background: linear-gradient(135deg, #004D40, #00695C);
+    color: #b2dfdb;
+    text-align: center;
+    padding: 18px;
+    font-size: 12px;
+    letter-spacing: .3px;
+}
+
+/* Print Actions */
+.receipt-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+.btn-print {
+    flex: 1;
+    padding: 13px 0;
+    background: #00897B;
+    color: #fff;
+    border: none;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s;
+    box-shadow: 0 3px 10px rgba(0,137,123,.25);
+}
+
+.btn-print:hover {
+    background: #00695C;
+    transform: translateY(-2px);
+}
+
+.btn-back-dash {
+    flex: 1;
+    padding: 13px 0;
+    background: #f1f5f9;
+    color: #334155;
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: .2s;
+}
+
+.btn-back-dash:hover { background: #e2e8f0; }
+
+/* =====================================================
+   PRINT STYLES
+===================================================== */
+@media print {
+    body { background: #fff; }
+    .receipt-actions, .vs-back, .vs-hero { display: none !important; }
+    .receipt-card { box-shadow: none; border: 1px solid #b2dfdb; }
+    .receipt-wrapper { margin: 0; padding: 0; }
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 700px) {
+    .vs-grid { grid-template-columns: 1fr; }
+    .receipt-header { flex-direction: column; }
+    .receipt-number { text-align: left; }
+    .vehicle-no-banner { flex-direction: column; padding: 16px 20px; }
+    .receipt-grid { grid-template-columns: 1fr; }
+    .receipt-body { padding: 24px 20px; }
+    .receipt-header { padding: 24px 20px; }
+    .receipt-status-row { padding: 14px 20px; }
+    .vs-hero h1 { font-size: 28px; }
+}

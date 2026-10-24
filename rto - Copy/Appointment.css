@@ -1,0 +1,426 @@
+/* =========================================
+   APPOINTMENT PAGE
+========================================= */
+
+.appointment-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #f5f9f8;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #1f2937;
+  box-sizing: border-box;
+}
+
+.appointment-page *,
+.appointment-page *::before,
+.appointment-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+/* =========================================
+   HEADER CENTER ALIGN
+========================================= */
+
+.appointment-header {
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    #00897B 0%,
+    #00796B 50%,
+    #004f4d 100%
+  );
+  padding: 65px 7%;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.appointment-header-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.appointment-label {
+  display: inline-block;
+  color: #b8f1e9;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+.appointment-header h1 {
+  margin: 0 0 14px;
+  color: #ffffff;
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.appointment-header p {
+  margin: 0 auto;
+  max-width: 650px;
+  color: #d9f5f1;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   MAIN TITLE CENTER ALIGN
+========================================= */
+
+.appointment-title {
+  margin-bottom: 38px;
+  text-align: center;
+}
+
+.appointment-title span {
+  display: block;
+  color: #00897B;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+
+.appointment-title h2 {
+  margin: 8px 0;
+  color: #1f2937;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.appointment-title p {
+  margin: 0 auto;
+  color: #64748b;
+  font-size: 16px;
+}
+
+/* =========================================
+   4 STEP PROCESS
+========================================= */
+
+.appointment-process {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  gap: 18px;
+  margin-bottom: 35px;
+}
+
+
+/* =========================================
+   STEP CARD
+========================================= */
+
+.appointment-step {
+  flex: 1;
+  min-height: 230px;
+  padding: 25px;
+  background: #ffffff;
+  border: 1px solid #e1ebe9;
+  border-radius: 16px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.appointment-step:hover {
+  transform: translateY(-5px);
+  border-color: #00897B;
+  box-shadow: 0 12px 30px rgba(0, 122, 120, 0.1);
+}
+
+.appointment-step.active {
+  background: #00897B;
+  border-color: #00897B;
+  box-shadow: 0 12px 30px rgba(0, 122, 120, 0.18);
+}
+
+
+/* =========================================
+   STEP NUMBER
+========================================= */
+
+.step-number {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #e7f5f3;
+  color: #00897B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.appointment-step.active .step-number {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+
+/* =========================================
+   STEP ICON
+========================================= */
+
+.appointment-step-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  background: #e8f6f4;
+  color: #00897B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.appointment-step.active .appointment-step-icon {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+
+
+/* =========================================
+   STEP CONTENT
+========================================= */
+
+.appointment-step-content h3 {
+  margin: 0 0 10px;
+  color: #1f2937;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.appointment-step-content p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.appointment-step.active .appointment-step-content h3 {
+  color: #ffffff;
+}
+
+.appointment-step.active .appointment-step-content p {
+  color: #d7f1ed;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.step-arrow {
+  align-self: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #e5f1ef;
+  color: #00897B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   SELECTED STEP CARD
+========================================= */
+
+.selected-step-card {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e1ebe9;
+  border-radius: 16px;
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+}
+
+.selected-step-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  background: #e8f6f4;
+  color: #00897B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.selected-step-content {
+  flex: 1;
+}
+
+.selected-step-content span {
+  color: #00897B;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.selected-step-content h3 {
+  margin: 5px 0;
+  color: #1f2937;
+  font-size: 21px;
+}
+
+.selected-step-content p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+
+/* =========================================
+   NEXT BUTTON
+========================================= */
+
+.appointment-next-btn {
+  border: none;
+  background: #00897B;
+  color: #ffffff;
+  padding: 13px 22px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.appointment-next-btn:hover {
+  background: #00695C;
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   INFORMATION BOX
+========================================= */
+
+.appointment-info {
+  margin-top: 25px;
+  width: 100%;
+  padding: 18px 22px;
+  border-radius: 10px;
+  background: #eaf7f5;
+  border: 1px solid #ccebe7;
+  color: #00796B;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.appointment-info p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .appointment-process {
+    flex-wrap: wrap;
+  }
+
+  .appointment-step {
+    flex: 1 1 calc(50% - 30px);
+  }
+
+  .step-arrow {
+    display: none;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .appointment-header {
+    padding: 45px 5%;
+  }
+
+  .appointment-header h1 {
+    font-size: 32px;
+  }
+
+  .appointment-header p {
+    font-size: 15px;
+  }
+
+  .appointment-main {
+    padding: 40px 5%;
+  }
+
+  .appointment-title h2 {
+    font-size: 25px;
+  }
+
+  .appointment-step {
+    flex: 1 1 100%;
+  }
+
+  .selected-step-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px;
+  }
+
+  .appointment-next-btn {
+    width: 100%;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .appointment-header h1 {
+    font-size: 27px;
+  }
+
+  .appointment-header p {
+    font-size: 14px;
+  }
+
+  .appointment-title h2 {
+    font-size: 22px;
+  }
+
+  .appointment-step {
+    padding: 22px;
+  }
+
+  .appointment-info {
+    align-items: flex-start;
+  }
+
+}

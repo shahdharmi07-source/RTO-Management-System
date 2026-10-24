@@ -1,0 +1,1113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f3fafa;
+
+    color: #102a43;
+}
+
+
+.page-container {
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 30px auto 50px;
+}
+
+
+/* =========================================
+   4 STEP PROCESS
+========================================= */
+
+.steps-card {
+    background: white;
+
+    border: 1px solid #d9eeee;
+
+    border-radius: 18px;
+
+    padding: 30px 35px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.04);
+}
+
+
+.steps-card h1 {
+    font-size: 30px;
+
+    color: #102a43;
+
+    margin-bottom: 8px;
+}
+
+
+.steps-card > p {
+    color: #66809b;
+
+    font-size: 16px;
+
+    margin-bottom: 30px;
+}
+
+
+.steps {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.step {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.step-circle {
+    width: 62px;
+
+    height: 62px;
+
+    border-radius: 50%;
+
+    background: #e6f6f5;
+
+    border: 1px solid #ccebea;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+
+.step.completed .step-circle {
+    background: #009688;
+
+    color: white;
+}
+
+
+.step.active .step-circle {
+    background: #009688;
+
+    color: white;
+
+    box-shadow:
+        0 8px 20px
+        rgba(7,139,135,0.25);
+}
+
+
+.step small {
+    display: block;
+
+    color: #009688;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+
+.step strong {
+    display: block;
+
+    color: #102a43;
+
+    font-size: 17px;
+}
+
+
+.line {
+    height: 2px;
+
+    background: #d9eeee;
+
+    width: 70px;
+}
+
+
+.completed-line {
+    background: #009688;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.page-header {
+    background: white;
+
+    border: 1px solid #d9eeee;
+
+    border-radius: 18px;
+
+    padding: 25px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 22px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.04);
+}
+
+
+.page-header h2 {
+    font-size: 26px;
+
+    margin-bottom: 7px;
+}
+
+
+.page-header p {
+    color: #66809b;
+}
+
+
+.application-icon {
+    width: 65px;
+
+    height: 65px;
+
+    background: #e6f6f5;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 30px;
+}
+
+
+/* =========================================
+   FORM CARD
+========================================= */
+
+.form-card {
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 30px 35px;
+
+    margin-bottom: 22px;
+
+    border: 1px solid #d9eeee;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.04);
+}
+
+
+.section-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 28px;
+}
+
+
+.section-title span {
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: #009688;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+
+.section-title h2 {
+    font-size: 21px;
+
+    margin-bottom: 5px;
+}
+
+
+.section-title p {
+    color: #70869c;
+
+    font-size: 14px;
+}
+
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 22px;
+}
+
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+
+.form-group label {
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #243b53;
+
+    margin-bottom: 8px;
+}
+
+
+.form-group select {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #ccdfe0;
+
+    border-radius: 9px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    background: white;
+
+    color: #102a43;
+
+    transition: .2s;
+}
+
+
+.form-group select:focus {
+    border-color: #009688;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(7,139,135,0.10);
+}
+
+
+/* =========================================
+   CALENDAR TITLE
+========================================= */
+
+.calendar-title {
+    margin-bottom: 20px;
+}
+
+
+.calendar-title h2 {
+    color: #102a43;
+
+    font-size: 21px;
+
+    margin-bottom: 7px;
+}
+
+
+.calendar-title p {
+    color: #66809b;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   CALENDAR HEADER
+========================================= */
+
+.calendar-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: #f3fafa;
+
+    border: 1px solid #d9eeee;
+
+    padding: 15px 20px;
+
+    border-radius: 12px;
+
+    margin-bottom: 15px;
+}
+
+
+.calendar-header h2 {
+    color: #102a43;
+
+    font-size: 21px;
+}
+
+
+.calendar-header button {
+    width: 42px;
+
+    height: 42px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #009688;
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+
+.calendar-header button:hover {
+    background: #009688;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   WEEK DAYS
+========================================= */
+
+.calendar-week {
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, 1fr);
+
+    gap: 7px;
+
+    margin-bottom: 7px;
+}
+
+
+.calendar-week div {
+    text-align: center;
+
+    padding: 10px 5px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: #66809b;
+}
+
+
+/* =========================================
+   CALENDAR GRID
+========================================= */
+
+.calendar-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, 1fr);
+
+    gap: 8px;
+}
+
+
+/* =========================================
+   DATE BOX
+========================================= */
+
+.calendar-date {
+    min-height: 78px;
+
+    border-radius: 10px;
+
+    border: 1px solid #d9eeee;
+
+    background: white;
+
+    padding: 8px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    transition: .2s;
+}
+
+
+.calendar-date:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.08);
+}
+
+
+.date-number {
+    font-size: 16px;
+
+    font-weight: 700;
+
+    color: #102a43;
+}
+
+
+.slot-status {
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-align: center;
+
+    padding: 4px 2px;
+
+    border-radius: 5px;
+}
+
+
+/* =========================================
+   AVAILABLE - GREEN
+========================================= */
+
+.calendar-date.available {
+    background: #e0f2f1;
+
+    border-color: #80cbc4;
+
+    cursor: pointer;
+}
+
+
+.calendar-date.available
+.slot-status {
+    background: #e0f2f1;
+
+    color: #00796B;
+}
+
+
+/* =========================================
+   LIMITED - YELLOW
+========================================= */
+
+.calendar-date.limited {
+    background: #fffbeb;
+
+    border-color: #fcd34d;
+
+    cursor: pointer;
+}
+
+
+.calendar-date.limited
+.slot-status {
+    background: #fef3c7;
+
+    color: #b45309;
+}
+
+
+/* =========================================
+   FULL / UNAVAILABLE - RED
+========================================= */
+
+.calendar-date.full {
+    background: #fef2f2;
+
+    border-color: #fca5a5;
+
+    cursor: not-allowed;
+
+    opacity: .85;
+}
+
+
+.calendar-date.full
+.slot-status {
+    background: #fee2e2;
+
+    color: #b91c1c;
+}
+
+
+/* =========================================
+   SUNDAY
+========================================= */
+
+.calendar-date.sunday {
+    background: #f5f5f5;
+
+    border-color: #dddddd;
+
+    cursor: not-allowed;
+
+    opacity: .55;
+}
+
+
+.calendar-date.sunday
+.slot-status {
+    background: #e5e7eb;
+
+    color: #6b7280;
+}
+
+
+/* =========================================
+   PAST
+========================================= */
+
+.calendar-date.past {
+    background: #f5f5f5;
+
+    border-color: #e5e5e5;
+
+    cursor: not-allowed;
+
+    opacity: .45;
+}
+
+
+.calendar-date.past
+.slot-status {
+    background: #e5e7eb;
+
+    color: #6b7280;
+}
+
+
+/* =========================================
+   SELECTED
+========================================= */
+
+.calendar-date.selected {
+    border: 3px solid #009688;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(7,139,135,.12);
+}
+
+
+/* =========================================
+   TODAY
+========================================= */
+
+.calendar-date.today {
+    box-shadow:
+        inset 0 0 0 2px #009688;
+}
+
+
+/* =========================================
+   EMPTY
+========================================= */
+
+.calendar-empty {
+    min-height: 78px;
+}
+
+
+/* =========================================
+   LEGEND
+========================================= */
+
+.calendar-legend {
+    display: flex;
+
+    gap: 25px;
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    background: #f3fafa;
+
+    border: 1px solid #d9eeee;
+
+    border-radius: 10px;
+
+    flex-wrap: wrap;
+}
+
+
+.calendar-legend span {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 13px;
+
+    color: #526b84;
+}
+
+
+.calendar-legend i {
+    width: 12px;
+
+    height: 12px;
+
+    border-radius: 50%;
+
+    display: inline-block;
+}
+
+
+.available-dot {
+    background: #00897B;
+}
+
+
+.limited-dot {
+    background: #f59e0b;
+}
+
+
+.full-dot {
+    background: #dc2626;
+}
+
+
+.sunday-dot {
+    background: #9ca3af;
+}
+
+
+/* =========================================
+   SELECTED DATE
+========================================= */
+
+.selected-slot {
+    margin-top: 20px;
+
+    padding: 15px;
+
+    background: #e6f6f5;
+
+    border: 1px solid #bce5e3;
+
+    border-radius: 10px;
+
+    color: #009688;
+
+    font-weight: 600;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   DECLARATION
+========================================= */
+
+.declaration {
+    background: white;
+
+    padding: 18px 22px;
+
+    border-radius: 12px;
+
+    border: 1px solid #d9eeee;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+    color: #526b84;
+
+    font-size: 14px;
+}
+
+
+.declaration input {
+    width: 17px;
+
+    height: 17px;
+
+    accent-color: #009688;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.form-buttons {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 40px;
+}
+
+
+.back-btn,
+.submit-btn {
+    padding: 14px 28px;
+
+    border-radius: 9px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+    text-decoration: none;
+
+    text-align: center;
+}
+
+
+.back-btn {
+    background: white;
+
+    color: #009688;
+
+    border: 1px solid #009688;
+}
+
+
+.back-btn:hover {
+    background: #e7f7f6;
+}
+
+
+.submit-btn {
+    background: #009688;
+
+    color: white;
+
+    border: none;
+
+    min-width: 250px;
+}
+
+
+.submit-btn:hover {
+    background: #009688;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 15px
+        rgba(7,139,135,0.25);
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.success {
+    background: #e3f8ee;
+
+    color: #087443;
+
+    padding: 16px 20px;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+
+    border-left: 5px solid #009688;
+
+    font-weight: 600;
+}
+
+
+.error {
+    background: #ffe8e8;
+
+    color: #b42318;
+
+    padding: 16px 20px;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+
+    border-left: 5px solid #d92d20;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   SUCCESS CARD
+========================================= */
+
+.success-card {
+    background: white;
+
+    border: 1px solid #d9eeee;
+
+    border-radius: 18px;
+
+    padding: 45px 35px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0,0,0,0.04);
+}
+
+
+.success-icon {
+    width: 75px;
+
+    height: 75px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background: #009688;
+
+    color: white;
+
+    font-size: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.success-card h2 {
+    color: #102a43;
+
+    font-size: 26px;
+
+    margin-bottom: 10px;
+}
+
+
+.success-card > p {
+    color: #66809b;
+
+    margin-bottom: 25px;
+}
+
+
+.booking-details {
+    background: #f3fafa;
+
+    border: 1px solid #d9eeee;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    text-align: left;
+
+    max-width: 550px;
+
+    margin: 0 auto 25px;
+}
+
+
+.booking-details p {
+    color: #526b84;
+
+    padding: 7px 0;
+}
+
+
+.booking-details strong {
+    color: #102a43;
+}
+
+
+.dashboard-btn {
+    display: inline-block;
+
+    background: #009688;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 14px 30px;
+
+    border-radius: 9px;
+
+    font-weight: 700;
+
+    transition: .3s;
+}
+
+
+.dashboard-btn:hover {
+    background: #009688;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .page-container {
+        width: 94%;
+    }
+
+
+    .steps {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+
+    .line {
+        width: 2px;
+
+        height: 25px;
+
+        margin-left: 30px;
+    }
+
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .form-group.full {
+        grid-column: auto;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .calendar-grid {
+        gap: 4px;
+    }
+
+
+    .calendar-date {
+        min-height: 60px;
+
+        padding: 5px;
+    }
+
+
+    .date-number {
+        font-size: 13px;
+    }
+
+
+    .slot-status {
+        font-size: 9px;
+    }
+
+
+    .calendar-week div {
+        font-size: 10px;
+    }
+
+
+    .calendar-header {
+        padding: 12px;
+    }
+
+
+    .calendar-header h2 {
+        font-size: 17px;
+    }
+
+
+    .calendar-legend {
+        gap: 12px;
+    }
+
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+
+    .back-btn,
+    .submit-btn {
+        width: 100%;
+    }
+
+}

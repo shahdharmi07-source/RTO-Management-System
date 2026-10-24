@@ -1,0 +1,810 @@
+/* =========================================
+   GLOBAL RESET
+========================================= */
+
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+/* =========================================
+   ROOT VARIABLES
+========================================= */
+
+:root {
+  --primary-teal: #00897B;
+  --secondary-teal: #00695C;
+  --text-dark: #1a202c;
+  --text-light: #4a5568;
+  --bg-white: #ffffff;
+
+  --shadow-soft:
+    0 15px 35px rgba(0, 0, 0, 0.06);
+
+  --shadow-card:
+    0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+
+/* =========================================
+   HOMEPAGE CONTAINER
+========================================= */
+
+.homepage-container {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  font-family:
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+
+  color: var(--text-dark);
+
+  background-color: #f8fafc;
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero-section {
+  display: flex;
+
+  position: relative;
+
+  width: 100%;
+  max-width: 100%;
+
+  height: 440px;
+
+  background-color:
+    var(--bg-white);
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   LEFT HERO IMAGE
+========================================= */
+
+.hero-left-bg {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 60%;
+  height: 100%;
+
+  z-index: 1;
+}
+
+
+.hero-left-bg img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position:
+    left center;
+}
+
+
+/* =========================================
+   IMAGE BLENDING
+========================================= */
+
+.hero-left-bg::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 60%,
+      rgba(255, 255, 255, 1) 100%
+    );
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.hero-content-wrapper {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  max-width: 100%;
+
+  display: flex;
+
+  justify-content:
+    flex-end;
+
+  align-items:
+    center;
+
+  padding:
+    0 8%;
+}
+
+
+.hero-right-text {
+  width: 50%;
+
+  padding-left: 40px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content:
+    center;
+
+  align-items:
+    flex-start;
+
+  text-align: left;
+}
+
+
+/* =========================================
+   HERO HEADING
+========================================= */
+
+.hero-right-text h2 {
+  font-size: 3.4rem;
+
+  color:
+    #2d3748;
+
+  margin: 0;
+
+  font-weight: 500;
+
+  line-height: 1.2;
+}
+
+
+.hero-right-text h3 {
+  font-size: 3.4rem;
+
+  color:
+    var(--primary-teal);
+
+  margin:
+    8px 0 20px 0;
+
+  font-weight: 700;
+
+  line-height: 1.1;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   HERO DESCRIPTION
+========================================= */
+
+.hero-desc {
+  font-size: 1.15rem;
+
+  color:
+    var(--text-light);
+
+  margin-bottom: 30px;
+
+  max-width: 450px;
+
+  line-height: 1.5;
+
+  text-align: left;
+}
+
+
+/* =========================================
+   SEARCH CONTAINER
+========================================= */
+
+.search-container {
+  display: flex;
+
+  align-items: center;
+
+  background:
+    var(--bg-white);
+
+  border-radius: 12px;
+
+  padding:
+    6px 6px 6px 20px;
+
+  box-shadow:
+    0 10px 25px
+    rgba(0, 0, 0, 0.05);
+
+  border:
+    1px solid #e2e8f0;
+
+  width: 100%;
+
+  max-width: 580px;
+
+  margin-top: 10px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   SEARCH ICON
+========================================= */
+
+.search-icon-left {
+  color:
+    #a0aec0;
+
+  margin-right:
+    12px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   SEARCH INPUT
+========================================= */
+
+.search-input {
+  border: none;
+
+  outline: none;
+
+  flex: 1;
+
+  width: 100%;
+
+  font-size: 1.05rem;
+
+  color:
+    var(--text-dark);
+
+  background:
+    #f0f4f8;
+
+  padding:
+    10px 5px;
+
+  text-transform:
+    uppercase;
+
+  box-shadow:
+    0 12px 36px
+    rgba(0, 0, 0, 0.1);
+}
+
+
+.search-input::placeholder {
+  text-transform:
+    none;
+
+  color:
+    #718096;
+}
+
+
+/* =========================================
+   SEARCH BUTTON
+========================================= */
+
+.search-btn {
+  background-color:
+    var(--primary-teal);
+
+  color:
+    white;
+
+  border: none;
+
+  width: 54px;
+
+  height: 46px;
+
+  border-radius: 10%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  cursor: pointer;
+
+  flex-shrink: 0;
+
+  transition:
+    background
+    0.3s
+    ease;
+
+  padding: 0;
+
+  margin: 0;
+}
+
+
+.search-btn:hover {
+  background-color:
+    var(--secondary-teal);
+}
+
+
+.search-btn svg {
+  width: 22px;
+
+  height: 22px;
+}
+
+
+/* =========================================
+   MAIN WRAPPER
+========================================= */
+
+.main-wrapper {
+  width: 88%;
+
+  max-width: 1400px;
+
+  margin:
+    -40px auto 0 auto;
+
+  position: relative;
+
+  z-index: 10;
+
+  display: flex;
+
+  gap: 25px;
+}
+
+
+/* =========================================
+   SERVICES CONTAINER
+========================================= */
+
+.services-container {
+  width: 100%;
+
+  flex: 3;
+
+  background:
+    var(--bg-white);
+
+  border-radius: 20px;
+
+  padding: 35px;
+
+  box-shadow:
+    var(--shadow-soft);
+}
+
+
+/* =========================================
+   SERVICES HEADER
+========================================= */
+
+.services-header {
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  align-items:
+    center;
+
+  margin-bottom: 30px;
+}
+
+
+.services-header h4 {
+  font-size: 1.4rem;
+
+  margin: 0;
+
+  font-weight: 700;
+}
+
+
+.view-all-link {
+  color:
+    var(--primary-teal);
+
+  text-decoration:
+    none;
+
+  font-size: 0.95rem;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   SERVICES GRID
+========================================= */
+
+.primary-services-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 16px;
+
+  margin-bottom: 35px;
+}
+
+
+/* =========================================
+   SERVICE LINK
+========================================= */
+
+.service-link {
+  text-decoration: none;
+
+  color: inherit;
+
+  display: block;
+
+  width: 100%;
+}
+
+
+/* =========================================
+   SERVICE CARD
+========================================= */
+
+.service-card {
+  width: 100%;
+
+  background:
+    var(--bg-white);
+
+  border:
+    1px solid #edf2f7;
+
+  border-radius: 14px;
+
+  padding:
+    25px 10px;
+
+  text-align:
+    center;
+
+  cursor:
+    pointer;
+
+  transition:
+    all
+    0.25s
+    ease;
+
+  box-shadow:
+    var(--shadow-card);
+}
+
+
+.service-card:hover {
+  transform:
+    translateY(-4px);
+
+  border-color:
+    rgba(
+      0,
+      122,
+      120,
+      0.3
+    );
+
+  box-shadow:
+    0 12px 24px
+    rgba(
+      0,
+      122,
+      120,
+      0.06
+    );
+}
+
+
+/* =========================================
+   SERVICE IMAGE
+========================================= */
+
+.service-icon-wrapper {
+  color:
+    var(--primary-teal);
+
+  margin-bottom:
+    18px;
+
+  display: flex;
+
+  justify-content:
+    center;
+
+  align-items:
+    center;
+}
+
+
+.service-icon-wrapper img {
+  width: 100px;
+
+  height: 100px;
+
+  object-fit:
+    contain;
+}
+
+
+/* =========================================
+   SERVICE TITLE
+========================================= */
+
+.service-card h5 {
+  font-size:
+    0.9rem;
+
+  margin:
+    0 0 10px 0;
+
+  font-weight:
+    700;
+
+  color:
+    #2d3748;
+
+  line-height:
+    1.3;
+}
+
+
+/* =========================================
+   SERVICE DESCRIPTION
+========================================= */
+
+.service-card p {
+  font-size:
+    0.8rem;
+
+  margin: 0;
+
+  color:
+    var(--primary-teal);
+
+  font-weight:
+    600;
+}
+
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .hero-left-bg {
+    width: 55%;
+  }
+
+  .hero-right-text {
+    width: 55%;
+  }
+
+  .hero-right-text h2,
+  .hero-right-text h3 {
+    font-size: 2.8rem;
+  }
+
+  .primary-services-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .hero-section {
+    height: auto;
+
+    min-height: 600px;
+  }
+
+
+  .hero-left-bg {
+    width: 100%;
+
+    height: 100%;
+  }
+
+
+  .hero-left-bg::after {
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 20%,
+        rgba(255, 255, 255, 0.95) 100%
+      );
+  }
+
+
+  .hero-content-wrapper {
+    min-height: 600px;
+
+    justify-content:
+      center;
+
+    align-items:
+      flex-end;
+
+    padding:
+      40px 20px 70px;
+  }
+
+
+  .hero-right-text {
+    width: 100%;
+
+    padding-left: 0;
+
+    align-items:
+      center;
+
+    text-align:
+      center;
+  }
+
+
+  .hero-right-text h2,
+  .hero-right-text h3 {
+    font-size:
+      2.5rem;
+  }
+
+
+  .hero-right-text h3 {
+    white-space:
+      normal;
+  }
+
+
+  .hero-desc {
+    font-size:
+      1rem;
+
+    text-align:
+      center;
+  }
+
+
+  .search-container {
+    max-width:
+      100%;
+  }
+
+
+  .main-wrapper {
+    width: 94%;
+
+    margin:
+      -30px auto 30px;
+  }
+
+
+  .services-container {
+    padding:
+      25px 20px;
+  }
+
+
+  .primary-services-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .hero-right-text h2,
+  .hero-right-text h3 {
+    font-size:
+      2.1rem;
+  }
+
+
+  .hero-desc {
+    font-size:
+      0.9rem;
+  }
+
+
+  .search-input {
+    font-size:
+      0.85rem;
+  }
+
+
+  .search-btn {
+    width:
+      48px;
+
+    height:
+      44px;
+  }
+
+
+  .services-header h4 {
+    font-size:
+      1.15rem;
+  }
+
+
+  .primary-services-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+}
+/* Admin shortcut shown only to an authenticated administrator. */
+.admin-home-banner { width: min(1120px, 92%); margin: 22px auto 0; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; gap: 18px; color: #fff; background: linear-gradient(100deg, #0b2f55, #1677b9); border-radius: 12px; box-shadow: 0 8px 20px rgba(11, 47, 85, .15); }
+.admin-home-banner strong, .admin-home-banner span { display: block; }.admin-home-banner span { margin-top: 4px; color: #d9efff; font-size: 13px; }.admin-home-banner a { color: #0b2f55; background: #fff; padding: 10px 14px; border-radius: 7px; text-decoration: none; font-weight: 700; white-space: nowrap; }
+@media (max-width: 650px) { .admin-home-banner { align-items: flex-start; flex-direction: column; } }

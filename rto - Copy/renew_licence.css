@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #F5FAF9;
+    color: #1F2937;
+}
+
+.page-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto 50px;
+}
+
+.page-header {
+    background: #FFFFFF;
+    border: 1px solid #DCEEEA;
+    border-radius: 18px;
+    padding: 28px 35px;
+    margin-bottom: 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+}
+
+.page-header h1 {
+    font-size: 30px;
+    color: #1E3A8A;
+    margin-bottom: 8px;
+}
+
+.page-header p {
+    font-size: 16px;
+    color: #607D9B;
+}
+
+.application-icon {
+    width: 65px;
+    height: 65px;
+
+    background: #E8F7F5;
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+}
+
+.form-card {
+    background: #FFFFFF;
+
+    border: 1px solid #DCEEEA;
+    border-radius: 18px;
+
+    padding: 30px 35px;
+    margin-bottom: 22px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 28px;
+}
+
+.section-title span {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+
+    background: #00897B;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.section-title h2 {
+    font-size: 21px;
+    color: #1F2937;
+    margin-bottom: 5px;
+}
+
+.section-title p {
+    color: #607D9B;
+    font-size: 14px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1F2937;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #DCEEEA;
+    border-radius: 9px;
+
+    background: white;
+    color: #1F2937;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.form-group textarea {
+    min-height: 105px;
+    resize: vertical;
+}
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+    border-color: #00897B;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #00897B;
+
+    box-shadow:
+        0 0 0 3px rgba(0,122,120,0.10);
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.cancel-btn,
+.submit-btn {
+    padding: 14px 28px;
+
+    border-radius: 9px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    text-decoration: none;
+    text-align: center;
+}
+
+.cancel-btn {
+    background: white;
+    color: #00897B;
+
+    border: 1px solid #00897B;
+}
+
+.cancel-btn:hover {
+    background: #E8F7F5;
+    transform: translateY(-2px);
+}
+
+.submit-btn {
+    min-width: 250px;
+
+    background: #00897B;
+    color: white;
+
+    border: none;
+}
+
+.submit-btn:hover {
+    background: #00796B;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 15px rgba(0,122,120,0.25);
+}
+
+.success {
+    background: #E8F7F5;
+    color: #00897B;
+
+    padding: 16px 20px;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+
+    border-left: 5px solid #00897B;
+
+    font-weight: 600;
+}
+
+.error {
+    background: #FFE8E8;
+    color: #B42318;
+
+    padding: 16px 20px;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+
+    border-left: 5px solid #D92D20;
+
+    font-weight: 600;
+}
+
+@media (max-width: 700px) {
+
+    .page-container {
+        width: 94%;
+    }
+
+    .page-header {
+        padding: 22px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .page-header h1 {
+        font-size: 24px;
+    }
+
+    .form-card {
+        padding: 22px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full {
+        grid-column: auto;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .cancel-btn,
+    .submit-btn {
+        width: 100%;
+    }
+}

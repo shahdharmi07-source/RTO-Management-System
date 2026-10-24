@@ -1,0 +1,507 @@
+/* =========================================
+   NAVBAR - FULL WIDTH
+========================================= */
+
+.navbar {
+  width: 100%;
+  max-width: 100%;
+
+  min-height: 84px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding:
+    12px
+    5%;
+
+  margin: 0 0 16px;
+
+  background:
+    #00897b;
+
+  border-bottom:
+    1px solid #00695c;
+
+  box-shadow:
+    0 2px 12px
+    rgba(0, 0, 0, 0.08);
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+
+  font-family:
+    "Segoe UI",
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif;
+}
+
+
+/* =========================================
+   BRAND / LOGO
+========================================= */
+
+.nav-brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  text-decoration: none;
+
+  flex-shrink: 0;
+
+  cursor: pointer;
+}
+
+
+/* Logo */
+
+.brand-logo {
+  width: 52px;
+
+  height: 52px;
+
+  object-fit: contain;
+
+  border-radius: 7px;
+
+  display: block;
+}
+
+
+/* Brand Text */
+
+.brand-text {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+
+.brand-text h1 {
+  margin: 0;
+
+  color:
+    #ffffff;
+
+  font-size:
+    22px;
+
+  font-weight:
+    800;
+
+  line-height:
+    1.2;
+}
+
+
+.brand-text p {
+  margin:
+    3px 0 0;
+
+  color:
+    rgba(255, 255, 255, 0.82);
+
+  font-size:
+    10px;
+
+  font-weight:
+    600;
+
+  text-transform:
+    uppercase;
+
+  letter-spacing:
+    1px;
+}
+
+
+/* =========================================
+   NAVIGATION LINKS
+========================================= */
+
+.nav-links {
+  display: flex;
+
+  flex: 1 1 auto;
+
+  align-items: center;
+
+  justify-content: center;
+
+  list-style: none;
+
+  gap: 12px;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+
+.nav-links li {
+  list-style: none;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+
+.nav-links a {
+  position: relative;
+
+  display: inline-block;
+
+  padding:
+    10px
+    13px;
+
+  color:
+    #ffffff;
+
+  text-decoration: none;
+
+  font-size:
+    19px;
+
+  font-weight:
+    600;
+
+  border-radius:
+    7px;
+
+  transition:
+    all
+    0.3s
+    ease;
+}
+
+
+/* Hover */
+
+.nav-links a:hover {
+  color:
+    #ffffff;
+
+  background:
+    rgba(255, 255, 255, 0.14);
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 4px 8px
+    rgba(
+      255,
+      255,
+      255,
+      0.08
+    );
+}
+
+
+/* Active / Bottom Line */
+
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 3px;
+
+  width: 0;
+
+  height: 2px;
+
+  background:
+    #ffffff;
+
+  border-radius: 5px;
+
+  transform:
+    translateX(-50%);
+
+  transition:
+    width
+    0.3s
+    ease;
+}
+
+
+.nav-links a:hover::after {
+  width: 50%;
+}
+
+
+/* =========================================
+   LOGIN BUTTON
+========================================= */
+
+.nav-actions {
+  display: flex;
+
+  flex-direction: row;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  flex-wrap: nowrap;
+
+  flex: 0 0 auto;
+
+  margin-left: auto;
+
+  gap: 16px;
+}
+
+
+.login-btn {
+  display: flex;
+
+  flex: 0 0 auto;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  padding:
+    10px
+    20px;
+
+  background:
+    #1e3a8a;
+
+  color:
+    #ffffff;
+
+  text-decoration: none;
+
+  border:
+    none;
+
+  border-radius:
+    7px;
+
+  font-size:
+    15px;
+
+  font-weight:
+    700;
+
+  white-space:
+    nowrap;
+
+  cursor:
+    pointer;
+
+  box-shadow:
+    0 4px 8px
+    rgba(
+      30,
+      58,
+      138,
+      0.2
+    );
+
+  transition:
+    all
+    0.3s
+    ease;
+}
+
+
+/* Login Hover */
+
+.login-btn:hover {
+  background:
+    #3b82f6;
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 6px 14px
+    rgba(
+      59,
+      130,
+      246,
+      0.3
+    );
+}
+
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 1050px) {
+
+  .navbar {
+    padding:
+      10px
+      25px;
+  }
+
+
+  .nav-links {
+    gap: 2px;
+  }
+
+
+  .nav-links a {
+    padding:
+      9px
+      9px;
+
+    font-size:
+      17px;
+  }
+
+  .nav-actions {
+    margin-left: 0;
+  }
+
+  .login-btn {
+    padding:
+      10px
+      10px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    width: 100%;
+
+    min-height:
+      72px;
+
+    padding:
+      10px
+      16px;
+  }
+
+
+  /* Hide Navigation */
+
+  .nav-links {
+    display:
+      none;
+  }
+
+
+  /* Logo */
+
+  .brand-logo {
+    width:
+      46px;
+
+    height:
+      46px;
+  }
+
+
+  /* Brand */
+
+  .brand-text h1 {
+    font-size:
+      20px;
+  }
+
+
+  .brand-text p {
+    font-size:
+      9px;
+  }
+
+
+  /* Login */
+
+  .login-btn {
+    padding:
+      9px
+      10px;
+
+    font-size:
+      13px;
+  }
+
+  .nav-actions {
+    gap: 12px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+
+  .navbar {
+    padding:
+      9px
+      12px;
+  }
+
+
+  .brand-text {
+    display:
+      none;
+  }
+
+
+  .brand-logo {
+    width:
+      44px;
+
+    height:
+      44px;
+  }
+
+
+  .login-btn {
+    padding:
+      8px
+      8px;
+
+    font-size:
+      11px;
+  }
+
+  .nav-actions {
+    gap: 14px;
+  }
+
+  .login-btn i {
+    width: 16px;
+
+    height: 16px;
+  }
+
+}

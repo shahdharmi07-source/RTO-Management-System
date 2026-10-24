@@ -1,0 +1,783 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f3fafa;
+
+    color: #102a43;
+}
+
+
+.page-container {
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 30px auto 50px;
+}
+
+
+
+/* =====================================================
+   4 STEP PROCESS
+   ===================================================== */
+
+.steps-card {
+
+    background: white;
+
+    border: 1px solid #d9eeee;
+
+    border-radius: 18px;
+
+    padding: 30px 35px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.04);
+}
+
+
+.steps-card h1 {
+
+    font-size: 30px;
+
+    margin-bottom: 8px;
+
+    color: #102a43;
+}
+
+
+.steps-card > p {
+
+    color: #66809b;
+
+    font-size: 16px;
+
+    margin-bottom: 30px;
+}
+
+
+
+/* STEPS */
+
+.steps {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.step {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.step-circle {
+
+    width: 62px;
+
+    height: 62px;
+
+    border-radius: 50%;
+
+    background: #e6f6f5;
+
+    border: 1px solid #ccebea;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+
+/* COMPLETED */
+
+.step.completed .step-circle {
+
+    background: #009688;
+
+    color: white;
+
+    box-shadow:
+        0 8px 20px rgba(7,139,135,0.25);
+}
+
+
+/* ACTIVE */
+
+.step.active .step-circle {
+
+    background: #009688;
+
+    color: white;
+
+    box-shadow:
+        0 8px 20px rgba(7,139,135,0.25);
+}
+
+
+.step small {
+
+    display: block;
+
+    color: #009688;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+
+.step strong {
+
+    display: block;
+
+    color: #102a43;
+
+    font-size: 17px;
+}
+
+
+.line {
+
+    height: 2px;
+
+    background: #d9eeee;
+
+    width: 90px;
+}
+
+
+.completed-line {
+
+    background: #009688;
+}
+
+
+
+/* =====================================================
+   PAGE HEADER
+   ===================================================== */
+
+.page-header {
+
+    background: white;
+
+    border: 1px solid #d9eeee;
+
+    border-radius: 18px;
+
+    padding: 25px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 22px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.04);
+}
+
+
+.page-header h2 {
+
+    font-size: 26px;
+
+    margin-bottom: 7px;
+}
+
+
+.page-header p {
+
+    color: #66809b;
+}
+
+
+.application-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    background: #e6f6f5;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 30px;
+}
+
+
+
+/* =====================================================
+   ERROR
+   ===================================================== */
+
+.error {
+
+    background: #ffe8e8;
+
+    color: #b42318;
+
+    padding: 16px 20px;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+
+    border-left: 5px solid #d92d20;
+
+    font-weight: 600;
+}
+
+
+
+/* =====================================================
+   FORM CARD
+   ===================================================== */
+
+.form-card {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 30px 35px;
+
+    margin-bottom: 22px;
+
+    border: 1px solid #d9eeee;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.04);
+}
+
+
+
+/* =====================================================
+   SECTION TITLE
+   ===================================================== */
+
+.section-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 28px;
+}
+
+
+.section-title span {
+
+    width: 45px;
+
+    height: 45px;
+
+    min-width: 45px;
+
+    border-radius: 50%;
+
+    background: #009688;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+
+.section-title h2 {
+
+    font-size: 21px;
+
+    margin-bottom: 5px;
+}
+
+
+.section-title p {
+
+    color: #70869c;
+
+    font-size: 14px;
+}
+
+
+
+/* =====================================================
+   DOCUMENT GRID
+   ===================================================== */
+
+.document-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 22px;
+}
+
+
+
+/* =====================================================
+   DOCUMENT BOX
+   ===================================================== */
+
+.document-box {
+
+    border: 1px solid #d9eeee;
+
+    border-radius: 14px;
+
+    padding: 22px;
+
+    display: flex;
+
+    gap: 18px;
+
+    background: #fbfefe;
+
+    transition: 0.3s;
+}
+
+
+.document-box:hover {
+
+    border-color: #009688;
+
+    box-shadow:
+        0 6px 18px rgba(7,139,135,0.10);
+
+    transform: translateY(-2px);
+}
+
+
+
+/* DOCUMENT ICON */
+
+.document-icon {
+
+    width: 58px;
+
+    height: 58px;
+
+    min-width: 58px;
+
+    border-radius: 12px;
+
+    background: #e6f6f5;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 27px;
+}
+
+
+
+/* DOCUMENT CONTENT */
+
+.document-content {
+
+    width: 100%;
+}
+
+
+.document-content h3 {
+
+    font-size: 17px;
+
+    color: #102a43;
+
+    margin-bottom: 6px;
+}
+
+
+.document-content p {
+
+    color: #526b84;
+
+    font-size: 14px;
+
+    margin-bottom: 7px;
+}
+
+
+.document-content small {
+
+    display: block;
+
+    color: #70869c;
+
+    font-size: 12px;
+
+    margin-bottom: 15px;
+}
+
+
+
+/* =====================================================
+   UPLOAD BUTTON
+   ===================================================== */
+
+.upload-btn {
+
+    display: inline-block;
+
+    background: #009688;
+
+    color: white;
+
+    padding: 9px 17px;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.upload-btn:hover {
+
+    background: #009688;
+
+    box-shadow:
+        0 4px 12px rgba(7,139,135,0.20);
+}
+
+
+.upload-btn input[type="file"] {
+
+    display: none;
+}
+
+
+
+/* =====================================================
+   FILE NAME
+   ===================================================== */
+
+.file-name {
+
+    margin-top: 10px;
+
+    padding: 8px 10px;
+
+    background: #f1f6f6;
+
+    border-radius: 7px;
+
+    color: #70869c;
+
+    font-size: 12px;
+
+    word-break: break-all;
+
+    border: 1px solid #e0eeee;
+}
+
+
+.file-name.selected {
+
+    background: #e6f6f5;
+
+    color: #009688;
+
+    border-color: #b7e4e2;
+
+    font-weight: 600;
+}
+
+
+
+/* =====================================================
+   UPLOAD INFO
+   ===================================================== */
+
+.upload-info {
+
+    margin-top: 25px;
+
+    padding: 18px 20px;
+
+    background: #f3fafa;
+
+    border-left: 4px solid #009688;
+
+    border-radius: 9px;
+
+    color: #526b84;
+
+    font-size: 14px;
+}
+
+
+.upload-info strong {
+
+    color: #102a43;
+
+    display: block;
+
+    margin-bottom: 10px;
+}
+
+
+.upload-info ul {
+
+    padding-left: 20px;
+}
+
+
+.upload-info li {
+
+    margin-bottom: 5px;
+}
+
+
+
+/* =====================================================
+   DECLARATION
+   ===================================================== */
+
+.declaration {
+
+    background: white;
+
+    padding: 18px 22px;
+
+    border-radius: 12px;
+
+    border: 1px solid #d9eeee;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+    color: #526b84;
+
+    font-size: 14px;
+}
+
+
+.declaration input {
+
+    width: 17px;
+
+    height: 17px;
+
+    accent-color: #009688;
+}
+
+
+
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+
+.form-buttons {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 40px;
+}
+
+
+.cancel-btn,
+.submit-btn {
+
+    padding: 14px 28px;
+
+    border-radius: 9px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    text-decoration: none;
+
+    text-align: center;
+}
+
+
+
+/* BACK BUTTON */
+
+.cancel-btn {
+
+    background: white;
+
+    color: #009688;
+
+    border: 1px solid #009688;
+}
+
+
+.cancel-btn:hover {
+
+    background: #e7f7f6;
+}
+
+
+
+/* SUBMIT BUTTON */
+
+.submit-btn {
+
+    background: #009688;
+
+    color: white;
+
+    border: none;
+
+    min-width: 280px;
+}
+
+
+.submit-btn:hover {
+
+    background: #009688;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 15px rgba(7,139,135,0.25);
+}
+
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 800px) {
+
+    .page-container {
+
+        width: 94%;
+    }
+
+
+    .steps {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+
+    .line {
+
+        width: 2px;
+
+        height: 25px;
+
+        margin-left: 30px;
+    }
+
+
+    .document-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .page-header {
+
+        padding: 22px;
+    }
+
+
+    .form-card {
+
+        padding: 22px;
+    }
+
+
+    .form-buttons {
+
+        flex-direction: column;
+    }
+
+
+    .cancel-btn,
+    .submit-btn {
+
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .document-box {
+
+        flex-direction: column;
+    }
+
+
+    .document-icon {
+
+        width: 55px;
+    }
+
+} 
