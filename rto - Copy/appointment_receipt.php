@@ -354,7 +354,7 @@ $booked_on   = !empty($appt["created_at"])
 <div class="rr-wrapper">
 
     <!-- Back -->
-    <a href="Dashboard.php" class="rr-back">← Back to Dashboard</a>
+    <a href="appointment_services.php" class="rr-back">← Back to Appointments</a>
 
     <div class="rr-card">
 
@@ -488,6 +488,9 @@ $booked_on   = !empty($appt["created_at"])
         <button class="btn-print" onclick="window.print()">
             🖨️ Print / Download Receipt
         </button>
+        <a href="appointments.php?new=1" class="btn-dash">
+            + New Appointment
+        </a>
         <a href="Dashboard.php" class="btn-dash">
             🏠 Back to Dashboard
         </a>
@@ -495,6 +498,6 @@ $booked_on   = !empty($appt["created_at"])
 
 </div>
 
-<script src="site-back-button.js?v=2" defer></script>
+<script src="site-back-button.js?v=3" defer></script>
 </body>
 </html>

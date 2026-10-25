@@ -719,6 +719,6 @@ if ($type === "users") {
 </script>
 <?php endif; ?>
 <script src="mobile-validation.js?v=1" defer></script>
-<script src="site-back-button.js?v=2" defer></script>
+<script src="site-back-button.js?v=3" defer></script>
 </body>
 </html>

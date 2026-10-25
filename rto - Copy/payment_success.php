@@ -131,6 +131,6 @@ if (!$receipt) {
         <a href="<?php echo htmlspecialchars($continue_url, ENT_QUOTES, 'UTF-8'); ?>" class="dashboard-btn">Continue →</a>
     </div>
 </div>
-<script src="site-back-button.js?v=2" defer></script>
+<script src="site-back-button.js?v=3" defer></script>
 </body>
 </html>

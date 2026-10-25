@@ -1331,6 +1331,62 @@ if (
                                 RTO Surat West
                             </option>
 
+                            <option value="RTO Ahmedabad">
+                                RTO Ahmedabad
+                            </option>
+
+                            <option value="RTO Vadodara">
+                                RTO Vadodara
+                            </option>
+
+                            <option value="RTO Rajkot">
+                                RTO Rajkot
+                            </option>
+
+                            <option value="RTO Gandhinagar">
+                                RTO Gandhinagar
+                            </option>
+
+                            <option value="RTO Bhavnagar">
+                                RTO Bhavnagar
+                            </option>
+
+                            <option value="RTO Jamnagar">
+                                RTO Jamnagar
+                            </option>
+
+                            <option value="RTO Junagadh">
+                                RTO Junagadh
+                            </option>
+
+                            <option value="RTO Anand">
+                                RTO Anand
+                            </option>
+
+                            <option value="RTO Bharuch">
+                                RTO Bharuch
+                            </option>
+
+                            <option value="RTO Navsari">
+                                RTO Navsari
+                            </option>
+
+                            <option value="RTO Valsad">
+                                RTO Valsad
+                            </option>
+
+                            <option value="RTO Mehsana">
+                                RTO Mehsana
+                            </option>
+
+                            <option value="RTO Morbi">
+                                RTO Morbi
+                            </option>
+
+                            <option value="RTO Nadiad">
+                                RTO Nadiad
+                            </option>
+
                         </select>
 
                     </div>
@@ -1517,7 +1573,7 @@ if (registrationForm) {
 }
 </script>
 <script src="mobile-validation.js?v=2" defer></script>
-<script src="site-back-button.js?v=2" defer></script>
+<script src="site-back-button.js?v=3" defer></script>
 </body>
 
 </html>

@@ -421,9 +421,7 @@ try {
                     <p>Book and manage your RTO office appointments.</p>
                     <button
                         type="button"
-                        onclick="location.href='<?php echo count($recent_appointments) > 0
-                            ? 'appointment_receipt.php?id=' . intval($recent_appointments[0]['id'])
-                            : '#appointments-section'; ?>'"
+                        onclick="location.href='appointment_services.php'"
                     >
                         View Services
                     </button>
@@ -498,6 +496,6 @@ try {
 
 </div>
 
-<script src="site-back-button.js?v=2" defer></script>
+<script src="site-back-button.js?v=3" defer></script>
 </body>
 </html>

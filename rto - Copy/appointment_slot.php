@@ -357,6 +357,9 @@ if (isset($_POST['confirm_booking'])) {
                     🧾 View Receipt
                 </a>
                 <?php endif; ?>
+                <a href="appointments.php?new=1" class="btn-view-receipt">
+                    + New Appointment
+                </a>
                 <a href="Dashboard.php" class="btn-go-dash">
                     🏠 Go to Dashboard
                 </a>
@@ -367,7 +370,7 @@ if (isset($_POST['confirm_booking'])) {
         <!-- Auto redirect bar -->
         <div class="appt-redirect-bar">
             <div class="appt-redirect-text">
-                Redirecting to Dashboard in <span id="countNum">3</span> seconds...
+                Returning to your appointments in <span id="countNum">3</span> seconds...
             </div>
             <div class="appt-progress">
                 <div class="appt-progress-fill"></div>
@@ -386,7 +389,7 @@ if (isset($_POST['confirm_booking'])) {
         if (el) el.textContent = sec;
         if (sec <= 0) {
             clearInterval(timer);
-            window.location.href = 'Dashboard.php?appt=1';
+            window.location.href = 'appointment_services.php';
         }
     }, 1000);
     </script>
@@ -739,6 +742,6 @@ if (isset($_POST['confirm_booking'])) {
 
 </div>
 
-<script src="site-back-button.js?v=2" defer></script>
+<script src="site-back-button.js?v=3" defer></script>
 </body>
 </html>

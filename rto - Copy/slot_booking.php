@@ -283,6 +283,50 @@ if (isset($_POST['book_slot'])) {
                     Rajkot RTO
                 </option>
 
+                <option value="Gandhinagar RTO">
+                    Gandhinagar RTO
+                </option>
+
+                <option value="Bhavnagar RTO">
+                    Bhavnagar RTO
+                </option>
+
+                <option value="Jamnagar RTO">
+                    Jamnagar RTO
+                </option>
+
+                <option value="Junagadh RTO">
+                    Junagadh RTO
+                </option>
+
+                <option value="Anand RTO">
+                    Anand RTO
+                </option>
+
+                <option value="Bharuch RTO">
+                    Bharuch RTO
+                </option>
+
+                <option value="Navsari RTO">
+                    Navsari RTO
+                </option>
+
+                <option value="Valsad RTO">
+                    Valsad RTO
+                </option>
+
+                <option value="Mehsana RTO">
+                    Mehsana RTO
+                </option>
+
+                <option value="Morbi RTO">
+                    Morbi RTO
+                </option>
+
+                <option value="Nadiad RTO">
+                    Nadiad RTO
+                </option>
+
             </select>
 
         </div>
@@ -1355,7 +1399,7 @@ generateCalendar();
 </script>
 
 
-<script src="site-back-button.js?v=2" defer></script>
+<script src="site-back-button.js?v=3" defer></script>
 </body>
 
 </html>

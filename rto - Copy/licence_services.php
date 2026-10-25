@@ -291,6 +291,6 @@ function licenceStatusClass($s) {
 
 </div>
 
-<script src="site-back-button.js?v=2" defer></script>
+<script src="site-back-button.js?v=3" defer></script>
 </body>
 </html>

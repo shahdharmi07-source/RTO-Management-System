@@ -15,6 +15,21 @@ if (!isset($_SESSION["user_id"])) {
 
 }
 
+if (isset($_GET["new"]) && $_GET["new"] === "1") {
+    unset(
+        $_SESSION["appointment_service"],
+        $_SESSION["appointment_step1_completed"],
+        $_SESSION["appointment_step"],
+        $_SESSION["appointment_name"],
+        $_SESSION["appointment_applicant_name"],
+        $_SESSION["appointment_mobile"],
+        $_SESSION["appointment_email"],
+        $_SESSION["appointment_date"],
+        $_SESSION["appointment_slot"],
+        $_SESSION["last_booking_id"]
+    );
+}
+
 $user_id = $_SESSION["user_id"];
 
 $message = "";
@@ -737,7 +752,7 @@ if (isset($_POST["continue_step"])) {
 </div>
 
 
-<script src="site-back-button.js?v=2" defer></script>
+<script src="site-back-button.js?v=3" defer></script>
 </body>
 
 </html>

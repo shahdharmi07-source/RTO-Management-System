@@ -4,22 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const currentPage = window.location.pathname.split("/").pop().toLowerCase();
-    document.addEventListener("click", (event) => {
-        if (!(event.target instanceof Element)) {
-            return;
-        }
-
-        const control = event.target.closest("a, button, input[type='button'], input[type='reset']");
-        if (!control) {
-            return;
-        }
-
-        const label = `${control.textContent || ""} ${control.getAttribute("aria-label") || ""} ${control.className || ""}`;
-        if (/\b(back|cancel|previous)\b/i.test(label)) {
-            event.preventDefault();
-            window.location.assign("home.php");
-        }
-    });
 
     if (currentPage === "home.php" || document.getElementById("site-back-button")) {
         return;
@@ -36,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const stylesheet = document.createElement("link");
     stylesheet.rel = "stylesheet";
-    stylesheet.href = "site-back-button.css?v=2";
+    stylesheet.href = "site-back-button.css?v=3";
     document.head.appendChild(stylesheet);
 
     const button = document.createElement("button");
@@ -44,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     button.type = "button";
     button.className = "site-back-button";
     button.setAttribute("aria-label", "Go to the home page");
-    button.textContent = "← Back to Home";
+    button.textContent = "Back to Home";
     button.addEventListener("click", () => window.location.assign("home.php"));
     document.body.appendChild(button);
 });

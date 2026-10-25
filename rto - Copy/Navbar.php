@@ -108,7 +108,7 @@ $isHomePage = basename($_SERVER["SCRIPT_NAME"] ?? "") === "home.php";
 <script>
     lucide.createIcons();
 </script>
-<script src="site-back-button.js?v=2" defer></script>
+<script src="site-back-button.js?v=3" defer></script>
 
 </body>
 </html>
